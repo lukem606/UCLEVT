@@ -1,0 +1,226 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      xmlns:Emoji="nativescript-emoji"
+      actionBarHidden="true" 
+      loaded="onLoaded" 
+      navigatedFrom="navFrom">
+
+    <GridLayout height="{{ screenHeight }}" >
+        <Image src="~/images/UCL_background_top.png" stretch="aspectFill" class="background"/>
+        <StackLayout class="container">
+            <Label textWrap="true" text="Vowel Trainer" class="MOCf title-text" id="title-text" />
+            <GridLayout rows="*" columns="*,*" width="100%" height="9%" >
+                <ContentView row="0" column="0" id="info" >
+                    <StackLayout verticalAlignment="center" >
+                        <Label row="0" column="0" text="&#xf129;" class="fas" />
+                    </StackLayout>
+                </ContentView>
+                <ContentView row="0" column="1" id="scores" >
+                    <StackLayout verticalAlignment="center" >
+                        <Label row="0" column="1" text="&#xf091;" class="fas" />
+                    </StackLayout>
+                </ContentView>
+            </GridLayout>
+            <GridLayout class="score-panel" rows="*" columns="4*,5*" width="100%" height="80px">
+                <FlexboxLayout row="0" column="0" justifyContent="center" >
+                    <Label text="{{ moves, moves + ' Move(s)' }}" class="OSCf" />
+                </FlexboxLayout>
+                <FlexboxLayout row="0" column="1" justifyContent="center" >
+                    <Label text="{{ mins, mins + ' mins ' }}" class="OSCf" />
+                    <Label text="{{ secs, secs + ' secs' }}" class="OSCf" />
+                </FlexboxLayout>
+            </GridLayout>
+            <GridLayout rows="*" columns="*" height="{{ screenWidth factor, screenWidth * factor }}" width="{{ screenWidth factor, screenWidth * factor }}" class="grid-container">
+                <Image class="bgImg" row="0" column="0" src="~/images/ai00.jpg" stretch="aspectFill" id="imgA" />
+                <Image class="bgImg" row="0" column="0" src="~/images/ai00.jpg" stretch="aspectFill" id="imgB" />
+                <GridLayout row="0" column="0" class="grid" rows="*,*,*,*,*,*,*" columns="*,*,*,*" height="98%" width="98%">
+                    <ContentView row="0" column="0" class="card" touch="onTap" id="A1" >
+                        <Label text="{{ wordList[0] }}" id="A1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="0" column="1" class="card" touch="onTap" id="A2" >
+                        <Label text="{{ wordList[1] }}" id="A2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="0" column="2" class="card" touch="onTap" id="B1" >
+                        <Label text="{{ wordList[2] }}" id="B1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="0" column="3" class="card" touch="onTap" id="B2" >
+                        <Label text="{{ wordList[3] }}" id="B2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="1" column="0" class="card" touch="onTap" id="C1" >
+                        <Label text="{{ wordList[4] }}" id="C1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="1" column="1" class="card" touch="onTap" id="C2" >
+                        <Label text="{{ wordList[5] }}" id="C2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="1" column="2" class="card" touch="onTap" id="D1" >
+                        <Label text="{{ wordList[6] }}" id="D1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="1" column="3" class="card" touch="onTap" id="D2" >
+                        <Label text="{{ wordList[7] }}" id="D2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="2" column="0" class="card" touch="onTap" id="E1" >
+                        <Label text="{{ wordList[8] }}" id="E1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="2" column="1" class="card" touch="onTap" id="E2" >
+                        <Label text="{{ wordList[9] }}" id="E2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="2" column="2" class="card" touch="onTap" id="F1" >
+                        <Label text="{{ wordList[10] }}" id="F1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="2" column="3" class="card" touch="onTap" id="F2" >
+                        <Label text="{{ wordList[11] }}" id="F2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="3" column="0" class="card" touch="onTap" id="G1" >
+                        <Label text="{{ wordList[12] }}" id="G1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="3" column="1" class="card" touch="onTap" id="G2" >
+                        <Label text="{{ wordList[13] }}" id="G2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="3" column="2" class="card" touch="onTap" id="H1" >
+                        <Label text="{{ wordList[14] }}" id="H1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="3" column="3" class="card" touch="onTap" id="H2" >
+                        <Label text="{{ wordList[15] }}" id="H2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="4" column="0" class="card" touch="onTap" id="I1" >
+                        <Label text="{{ wordList[16] }}" id="I1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="4" column="1" class="card" touch="onTap" id="I2" >
+                        <Label text="{{ wordList[17] }}" id="I2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="4" column="2" class="card" touch="onTap" id="J1" >
+                        <Label text="{{ wordList[18] }}" id="J1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="4" column="3" class="card" touch="onTap" id="J2" >
+                        <Label text="{{ wordList[19] }}" id="J2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="5" column="0" class="card" touch="onTap" id="K1" >
+                        <Label text="{{ wordList[20] }}" id="K1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="5" column="1" class="card" touch="onTap" id="K2" >
+                        <Label text="{{ wordList[21] }}" id="K2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="5" column="2" class="card" touch="onTap" id="L1" >
+                        <Label text="{{ wordList[22] }}" id="L1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="5" column="3" class="card" touch="onTap" id="L2" >
+                        <Label text="{{ wordList[23] }}" id="L2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="6" column="0" class="card" touch="onTap" id="M1" >
+                        <Label text="{{ wordList[24] }}" id="M1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="6" column="1" class="card" touch="onTap" id="M2" >
+                        <Label text="{{ wordList[25] }}" id="M2-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="6" column="2" class="card" touch="onTap" id="N1" >
+                        <Label text="{{ wordList[26] }}" id="N1-txt" class="OSCf" />
+                    </ContentView>
+                    <ContentView row="6" column="3" class="card" touch="onTap" id="N2" >
+                        <Label text="{{ wordList[27] }}" id="N2-txt" class="OSCf" />
+                    </ContentView>
+                </GridLayout>
+            </GridLayout>
+        </StackLayout>
+        <GridLayout rows="*" columns="*" touch="overlayBlock" id="modal-container" height="{{ screenHeight }}">
+            <ContentView row="0" column="0" id="overlay" />
+            <ContentView row="0" column="0" id="modal-start" class="modal" >
+                <StackLayout>
+                    <Label text="Tap on a card to play a word." class="modal-start-text OSCf" textWrap="true" />
+                    <Label text="Try to match cards in as few moves as possible." class="modal-start-text OSCf" textWrap="true" />
+                    <ContentView class="button" touch="startGame">
+                        <Label text="Start" class="Rf" />
+                    </ContentView>
+                </StackLayout>
+            </ContentView>
+            <ContentView row="0" column="0" id="modal-end" class="modal" >
+                <StackLayout>
+                    <StackLayout orientation="horizontal" >
+                        <Label text="Congratulations!" class="MOCf modal-header" />
+                        <Emoji:Emoji name="balloon" size="22px" />
+                    </StackLayout>
+                    <Label text="You're a winner" class="modal-text OSCf" />
+                    <Label text="{{ moves, 'You made '+moves+' moves' }}"   class="modal-text OSCf" />
+                    <Label text="{{ mins secs, 'in '+mins+' mins '+secs+' secs'}}" class="modal-text OSCf" />
+                    <GridLayout rows="*" columns="{{ columns }}" height="7%" width="80%" class="progressbar" id="progressGrid" >
+                        <ContentView row="0" col="0" class="progressbar-value" />
+                    </GridLayout>
+                    <Label text="{{ gamesCount testPoint, (testPoint - gamesCount) + ' games until next test' }}" textWrap="true" class="modal-text OSCf" id="end-next-game"/>
+                    <ContentView class="button" touch="endNewGame">
+                        <Label text="New Game" class="Rf" />
+                    </ContentView>
+                </StackLayout>
+            </ContentView>
+            <ContentView row="0" column="0" id="modal-info" class="modal" >
+                <StackLayout>
+                    <StackLayout width="90%">
+                        <Label text="This is a speech memory-card game that is designed to improve how language learners understand southern British English vowels. You will start by testing your English vowel identification, then play memory-card games (i.e., click to find pairs of cards with the same word). You can play games any time you want and quit at any time. After you’ve played 50 times, you’ll be tested again. There is also an optional questionnaire for you to tell us about your language background." textWrap="true" class="modal-info-text OSCf" />
+                        <Label text="This app is part of our research at University College London. We will give you a random version of the memory card game so that we can test how different aspects of the game affect learning. We will save your responses as you play the game, but this data collection will be anonymous. The data will help us understand how people learn new languages and may help us design better training programs." textWrap="true" class="modal-info-text OSCf" />
+                        <Label text="If you have questions, want more information, or have feedback for us, please email p.iverson@ucl.ac.uk." textWrap="true" class="modal-info-text OSCf" />
+                        <FlexboxLayout justifyContent="center">
+                            <ContentView touch="closeInfo" class="button" >
+                                <Label text="Close" class="Rf" />
+                            </ContentView>
+                        </FlexboxLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+            <ContentView row="0" column="0" id="modal-scores" class="modal" >
+                <StackLayout>
+                    <Label text="Top scores" class="MOCf modal-header" />
+                    <StackLayout id="scores-stack">
+                        <FlexboxLayout width="80%" height="20%" class="scores-flex">
+                            <Label text="&#xf091;" class="fas scores-trophy" style="color: #FFD700"/>
+                            <Label text="{{ scoreMoves[0], scoreMoves[0] + ' moves' }}" class="OSCf modal-text" />
+                            <Label text="{{ scoreTimes[0][0] scoreTimes[0][1], scoreTimes[0][0] + ' mins ' + scoreTimes[0][1] + ' secs' }}" class="OSCf modal-text" />
+                        </FlexboxLayout>
+                        <FlexboxLayout width="80%" height="20%" class="scores-flex">
+                            <Label text="&#xf091;" class="fas scores-trophy" style="color: #C0C0C0"/>
+                            <Label text="{{ scoreMoves[1], scoreMoves[1] + ' moves' }}" class="OSCf modal-text" />
+                            <Label text="{{ scoreTimes[1][0] scoreTimes[1][1], scoreTimes[1][0] + ' mins ' + scoreTimes[1][1] + ' secs' }}" class="OSCf modal-text" />
+                        </FlexboxLayout>
+                        <FlexboxLayout width="80%" height="20%" class="scores-flex">
+                            <Label text="&#xf091;" class="fas scores-trophy" style="color: #CD7F32"/>
+                            <Label text="{{ scoreMoves[2], scoreMoves[2] + ' moves' }}" class="OSCf modal-text" />
+                            <Label text="{{ scoreTimes[2][0] scoreTimes[2][1], scoreTimes[2][0] + ' mins ' + scoreTimes[2][1] + ' secs' }}" class="OSCf modal-text" />
+                        </FlexboxLayout>
+                    </StackLayout>
+                    <Label text="There are no top scores yet!" class="modal-text OSCf" id="scores-text" />
+                    <ContentView touch="closeScores" class="button" >
+                        <Label text="Close" class="Rf" />
+                    </ContentView>
+                </StackLayout>
+            </ContentView>
+            <ContentView row="0" column="0" id="modal-hiscore" class="modal" >
+                <StackLayout>
+                    <Label text="You got a new high score!" class="MOCf modal-header" />
+                    <GridLayout rows="*" columns="*,2*,2*" width="90%" height="20%">
+                        <Label row="0" column="0" text="&#xf091;" class="fas hiscore-trophy" id="hiscore-trophy" />
+                        <Label row="0" column="1" text="{{ moves, moves + ' moves' }}" class="OSCf modal-text" />
+                        <Label row="0" column="2" text="{{ mins secs, mins + ' mins ' + secs + ' secs' }}" class="OSCf modal-text" />
+                    </GridLayout>
+                    <GridLayout rows="*" columns="{{ columns }}" height="7%" width="80%" class="progressbar" id="progressGrid" >
+                        <ContentView row="0" col="0" class="progressbar-value" />
+                    </GridLayout>
+                    <Label text="{{ gamesCount testPoint, (testPoint - gamesCount) + ' games until next test' }}" textWrap="true" class="modal-text OSCf" id="hiscore-next-game"/>
+                    <ContentView class="button" touch="hiscoreNewGame">
+                        <Label text="New Game" class="Rf" />
+                    </ContentView>
+                </StackLayout>
+            </ContentView>
+            <ContentView row="0" column="0" id="modal-dialog" class="modal" >
+                <StackLayout>
+                    <Label text="We would like to ask you some questions" class="modal-text OSCf" textWrap="true" />
+                    <Label text="that help with our research" class="modal-text OSCf" textWrap="true" />
+                    <FlexboxLayout justifyContent="center">
+                        <ContentView touch="navOK" class="button">
+                            <Label text="OK" class="Rf" />
+                        </ContentView>
+                        <ContentView touch="navSkip" class="button">
+                            <Label text="Skip" class="Rf" />
+                        </ContentView>
+                    </FlexboxLayout>
+                </StackLayout>
+            </ContentView>
+        </GridLayout>
+        <GridLayout touch="overlayBlock" id="loadDelay" />
+    </GridLayout>
+</Page>

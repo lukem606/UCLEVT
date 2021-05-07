@@ -1,0 +1,44 @@
+<Page actionBarHidden="true" 
+      loaded="onLoaded" 
+      navigatingTo="navTo" 
+      navigatingFrom="navFrom" 
+      >
+    <ActionBar title="">
+        <NavigationButton visibility="collapsed" />
+    </ActionBar>
+
+    <GridLayout height="{{ screenHeight }}">
+        <ScrollView>
+            <StackLayout class="top OSCf" id="top">
+                <Label textWrap="true" text="These questions help with our research, and any answers are stored anonymously. They are entirely optional so please scroll to the bottom if you'd rather skip them." class="prompt" />
+                <Label text="How old are you? (years)" textWrap="true" class="subhead" />
+                <TextField hint="Enter here..." class="input key" keyboardType="integer" id="age" maxLength="5" />
+                <Label text="How old were you when you started learning English? (years)" textWrap="true" class="subhead" />
+                <TextField hint="Enter here..." class="input key" keyboardType="integer" id="learningAge" maxLength="5" />
+                <Label text="How much time have you spent in English-speaking countries? (years)" textWrap="true" class="subhead" />
+                <TextField hint="Enter here..." class="input key" keyboardType="integer" id="timeCountries" maxLength="5" />
+                <Label text="Which languages were spoken in your home when you were a young child (less than 2 years old)?" textWrap="true" class="subhead" />
+                <TextField hint="Enter here..." class="input key" id="youngLanguage" maxLength="100" />
+                <Label text="Which other languages do you speak fluently, if any?" textWrap="true" class="subhead" />
+                <TextField hint="Enter here..." class="input key" id="otherLanguage" maxLength="100" />
+                <Label text="Do you have any hearing problems, such as using a hearing aid?" textWrap="true" class="subhead" />
+                <TextField hint="Enter here..." class="input key" id="hearing" maxLength="100" />
+                <Label text="What do you hope to get out of this training program?" textWrap="true" class="subhead" />
+                <TextField hint="Enter here..." class="input key" id="purpose" maxLength="100" />
+                <FlexboxLayout class="flex">
+                    <ContentView touch="navSkip" class="button Rf" height="{{ screenHeight * 0.05 }}" >
+                        <Label text="Skip" />
+                    </ContentView>
+                    <ContentView touch="navSubmit" class="button Rf" height="{{ screenHeight * 0.05 }}" >
+                        <Label text="Submit" />
+                    </ContentView>
+                </FlexboxLayout>
+            </StackLayout>
+        </ScrollView>
+        <ContentView class="swipe-icon swipeFade">
+            <GridLayout rows="*" columns="*">
+                <Label row="0" column="0" text="&#xf078;" class="fas chevron swipeFade" />
+            </GridLayout>
+        </ContentView>
+    </GridLayout>
+</Page>

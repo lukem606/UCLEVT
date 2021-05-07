@@ -1,0 +1,32 @@
+use_frameworks!
+
+target "MemoryGame" do
+# Begin Podfile - /Users/lukemartin/Documents/NSapps/MemoryGame/node_modules/@nstudio/nativescript-checkbox/platforms/ios/Podfile
+pod 'BEMCheckBox', '~> 1.4.1'
+
+# End Podfile
+
+# Begin Podfile - /Users/lukemartin/Documents/NSapps/MemoryGame/node_modules/nativescript-https/platforms/ios/Podfile
+pod 'AFNetworking', '~> 4.0'
+
+# End Podfile
+
+# NativeScriptPlatformSection /Users/lukemartin/Documents/NSapps/MemoryGame/node_modules/@nativescript/core/platforms/ios/Podfile with 9.0
+platform :ios, '9.0'
+# End NativeScriptPlatformSection
+
+# Begin Podfile - /Users/lukemartin/Documents/NSapps/MemoryGame/node_modules/@nativescript/core/platforms/ios/Podfile
+# platform :ios, '9.0'
+use_frameworks!
+
+pod 'MaterialComponents/Tabs', '~> 94.5'
+# End Podfile
+end
+
+post_install do |pi|
+    pi.pods_project.targets.each do |t|
+        t.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+        end
+    end
+end

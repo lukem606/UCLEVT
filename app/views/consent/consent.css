@@ -1,0 +1,54 @@
+Button {
+    width: 50%;
+}
+
+.block {
+    margin-bottom: 20px;
+}
+
+.end {
+    margin-bottom: 50px;
+}
+
+.focus {
+    font-size: 14px;
+}
+
+.header {
+    font-size: 16px;
+}
+
+.top {
+    padding: 20px;
+}
+
+#modal {
+    background-color: #FEFEFE;
+    border-radius: 15px;
+    margin: 20px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#modal Button {
+    background-color: #1111FF;
+    color: #FFFFFF;
+    width: 30%;
+}
+
+#modal Label {
+    font-size: 18px;
+    margin: 30px;
+}
+
+#overlay {
+    background-color: #111111;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#warning {
+    color: #FF0000;
+    horizontal-align: center;
+    visibility: hidden;
+}

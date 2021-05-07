@@ -1,0 +1,37 @@
+<Page xmlns:CheckBox="@nstudio/nativescript-checkbox"
+      actionBarHidden="true" 
+      loaded="onLoaded" 
+      navigatingTo="navTo" >
+
+    <GridLayout height="{{ screenHeight }}" id="page">
+        <ScrollView scroll="onScroll">
+            <StackLayout class="top" id="top">
+                <StackLayout class="title" >
+                    <Image class="logo" src="~/images/UCL_logo.png" stretch="aspectFill"/>
+                    <Label textWrap="true" text="English Vowel Trainer" class="Rf title-text" />
+                </StackLayout>
+                <Label textWrap="true" class="block OSCf" text="This is a speech memory-card game that is designed to improve how language learners understand southern British English vowels. You will start by testing your English vowel identification, then play memory-card games (i.e., click to find pairs of cards with the same word). You can play games any time you want and quit at any time. After you’ve played 50 times, you’ll be tested again. There is also an optional questionnaire for you to tell us about your language background." />
+                <Label textWrap="true" class="block OSCf" text="This app is part of our research at University College London. We will give you a random version of the memory card game so that we can test how different aspects of the game affect learning. We will save your responses as you play the game, but this data collection will be anonymous. The data will help us understand how people learn new languages and may help us design better training programs." />
+                <GridLayout rows="*" columns="6*,*" >
+                    <Label row="0" column="0" textWrap="true" class="block OSCf" text="Thank you for reading this information sheet and considering to take part in this research. If you want to read this information again, press this button on the game screen." />
+                    <Label row="0" column="1" text="&#xf05a;" class="fas info" horizontalAlignment="center" verticalAlignment="center"/>    
+                </GridLayout>
+                <GridLayout rows="*" columns="*,5*" class="block toHide" >
+                    <FlexboxLayout row="0" column="0" justifyContent="center" >
+                        <CheckBox:CheckBox checked="false" id="control"/>
+                    </FlexboxLayout>
+                    <Label row="0" column="1" textWrap="true" class="OSCf" text="By checking this box, we understand that you consent to participate in this research. If you have questions, want more information, or have feedback for us, please email p.iverson@ucl.ac.uk." />
+                </GridLayout>
+                <Label textWrap="true" textWrap="true" class="block OSCf" text="You must give consent by checking the box in order to continue" id="warning" />
+					<ContentView touch="navContinue" class="button toHide Rf">
+                    <Label text="Continue" />
+                </ContentView>
+            </StackLayout>
+        </ScrollView>
+        <ContentView id="swipe-icon">
+            <GridLayout rows="*" columns="*">
+                <Label row="0" column="0" text="&#xf078;" class="fas chevron swipeFade" />
+            </GridLayout>
+        </ContentView>
+    </GridLayout>
+</Page>

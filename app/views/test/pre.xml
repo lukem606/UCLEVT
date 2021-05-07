@@ -1,0 +1,66 @@
+<Page actionBarHidden="true" 
+      loaded="onLoaded" 
+      navigatingFrom="navFrom" 
+      navigatedTo="navTo" >
+
+    <GridLayout height="{{ screenHeight }}">
+        <Image src="~/images/UCL_background_top.png" stretch="aspectFill" class="background"/>
+        <StackLayout class="container">
+            <Label textWrap="true" text="Vowel Test" class="MOCf title-text" id="title-text" />
+            <GridLayout rows="*" columns="*" width="100%" height="9%" >
+                <ContentView row="0" column="0" id="info" >
+                    <StackLayout verticalAlignment="center" >
+                        <Label row="0" column="0" text="&#xf129;" class="fas" />
+                    </StackLayout>
+                </ContentView>
+            </GridLayout>
+            <Label text="{{ current, current + ' of 28' }}" class="subheader OSCf" />
+            <GridLayout rows="*,*" columns="*,*" height="{{ screenWidth factor, screenWidth * factor }}" width="{{ screenWidth factor, screenWidth * factor }}" class="grid">
+                <ContentView row="0" column="0" class="card" id="C1" >
+                    <Label text="{{ wordList[0] }}" class="card-label OSCf" id="C1-txt" />
+                </ContentView>
+                <ContentView row="0" column="1" class="card" id="C2" >
+                    <Label text="{{ wordList[1] }}" class="card-label OSCf" id="C2-txt" />
+                </ContentView>
+                <ContentView row="1" column="0" class="card" id="C3" >
+                    <Label text="{{ wordList[2] }}" class="card-label OSCf" id="C3-txt" />
+                </ContentView>
+                <ContentView row="1" column="1" class="card" id="C4" >
+                    <Label text="{{ wordList[3] }}" class="card-label OSCf" id="C4-txt" />
+                </ContentView>
+            </GridLayout>
+        </StackLayout>
+        <GridLayout rows="*" columns="*" touch="overlayBlock" id="modal-container" height="{{ screenHeight }}">
+            <ContentView row="0" column="0" id="overlay" />
+            <ContentView row="0" column="0" id="modal-start" class="modal" >
+                <StackLayout>
+                    <Label text="Let's start by testing your vowel identification." class="modal-start-text OSCf" textWrap="true" />
+                    <ContentView touch="startGame" class="button">
+                        <Label text="Start" class="Rf" />
+                    </ContentView>
+                </StackLayout>
+            </ContentView>
+            <ContentView row="0" column="0" id="modal-end" class="modal" >
+                <StackLayout>
+                    <Label text="Finished!" class="modal-header MOCf" />
+                    <Label text="{{ finalScore, 'You were ' + finalScore +'% correct' }}" class="modal-text OSCf" />
+						 <ContentView touch="navContinue" class="modal-end-button button">
+							 <Label text="Continue" class="Rf" />
+						 </ContentView>
+                </StackLayout>
+            </ContentView>
+            <ContentView row="0" column="0" id="modal-info" class="modal" >
+                <StackLayout>
+                    <StackLayout width="90%">
+                        <Label text="This is a speech memory-card game that is designed to improve how language learners understand southern British English vowels. You will start by testing your English vowel identification, then play memory-card games (i.e., click to find pairs of cards with the same word). You can play games any time you want and quit at any time. After you’ve played 50 times, you’ll be tested again. There is also an optional questionnaire for you to tell us about your language background." textWrap="true" class="modal-info-text OSCf" />
+                        <Label text="This app is part of our research at University College London. We will give you a random version of the memory card game so that we can test how different aspects of the game affect learning. We will save your responses as you play the game, but this data collection will be anonymous. The data will help us understand how people learn new languages and may help us design better training programs." textWrap="true" class="modal-info-text OSCf" />
+                        <Label text="If you have questions, want more information or have feedback for us, please email p.iverson@ucl.ac.uk." textWrap="true" class="modal-info-text OSCf" />
+                        <ContentView touch="closeInfo" class="button" >
+                            <Label text="Close" class="Rf" />
+                        </ContentView>
+                    </StackLayout>
+                </StackLayout>
+            </ContentView>
+        </GridLayout>
+    </GridLayout>
+</Page>

@@ -1,0 +1,7 @@
+{
+    "cardMoves": ["", "", ""],
+    "cardTimes": [["",""], ["",""], ["",""]],
+    "HVPTPercentage": ["--", "--", "--"],
+    "idPercentage": ["--", "--", "--"],
+    "preScore": 0
+}

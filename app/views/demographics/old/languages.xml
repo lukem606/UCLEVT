@@ -1,0 +1,188 @@
+<Page navigatingTo="navTo" 
+      loaded="onLoaded" 
+      xmlns:dd="nativescript-drop-down" >
+    <ActionBar title="">
+        <NavigationButton android.systemIcon="ic_menu_back" tap="navBack" id="androidBack"/>
+        <ActionItem ios.position="left" tap="navBack" id="iosBack">
+            <Label text="&#xf060;" class="fas back" />
+        </ActionItem>
+    </ActionBar>
+
+    <GridLayout>
+        <ScrollView>
+            <GridLayout>
+                <StackLayout left="{{ screenWidth * 0.01 }}" top="{{ screenHeight * 0.01 }}" height="98%" width="98%" justifyContent="center" id="full" class="OSCf">
+                    <StackLayout height="15%" >
+                        <Label textWrap="true" text="Please give details of any languages you've learnt or are able to speak" class="subhead" />
+                    </StackLayout>
+                    <GridLayout class="cell cell-text" height="450px" >
+                        <StackLayout width="98%" >
+                            <GridLayout rows="*" columns="2*,5*,2*" height="100px">
+                                <Label row="0" column="0" text="Language:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <ContentView row="0" column="1" height="auto" class="border">
+                                    <dd:DropDown items="{{ languages }}" hint="Select language..." class="drop-down" itemsTextAlignment="center" id="dropdown-1a"/>
+                                </ContentView>
+                                <ContentView row="0" column="2" touch="tapDropdown" id="down-1a" class="border">
+                                    <Label text="&#xf0dd;" class="fas" />
+                                </ContentView>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,3*,4*" height="150px">
+                                <Label row="0" column="0" text="Age of learning:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Enter years..." class="key" blur="dismissInput" keyboardType="integer" width="100%" id="age-1" />
+                                <Label row="0" column="2" text="Competance:" class="justify" verticalAlignment="center" />
+                                <GridLayout row="0" column="3" rows="*" columns="3*,*" class="border" >
+                                    <ContentView row="0" column="0" >
+                                        <dd:DropDown items="{{ competance }}" hint="Select..." class="drop-down" itemsTextAlignment="center" id="dropdown-1b"/>
+                                    </ContentView>
+                                    <ContentView row="0" column="1" touch="tapDropdown" id="down-1b" >
+                                        <Label text="&#xf0dd;" class="fas down" />
+                                    </ContentView>
+                                </GridLayout>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,2*" height="150px" >
+                                <Label row="0" column="0" text="Length of learning:" textWrap="true"   class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Years..." keyboardType="integer" class="key" width="30%" id="years-1" />
+                                <TextField row="0" column="2" hint="Months..." keyboardType="integer" class="key" width="30%" id="months-1" />
+                            </GridLayout>
+                        </StackLayout>
+                    </GridLayout>
+                    <GridLayout class="cell cell-text" height="450px" >
+                        <StackLayout width="98%" >
+                            <GridLayout rows="*" columns="2*,5*,2*" height="100px">
+                                <Label row="0" column="0" text="Language:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <ContentView row="0" column="1" class="border">
+                                    <dd:DropDown items="{{ languages }}" hint="Select language..." class="input-language drop-down" itemsTextAlignment="center" id="dropdown-2a"/>
+                                </ContentView>
+                                <ContentView row="0" column="2" touch="tapDropdown" id="down-2a" class="border">
+                                    <Label text="&#xf0dd;" class="fas" />
+                                </ContentView>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,3*,4*" height="150px">
+                                <Label row="0" column="0" text="Age of learning:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Enter years..." class="key" blur="dismissInput" keyboardType="integer" width="100%" id="age-2" />
+                                <Label row="0" column="2" text="Competance:" class="justify" verticalAlignment="center" />
+                                <GridLayout row="0" column="3" rows="*" columns="3*,*" class="border" >
+                                    <ContentView row="0" column="0" >
+                                        <dd:DropDown items="{{ competance }}" hint="Select..." class="input-language drop-down" itemsTextAlignment="center" id="dropdown-2b"/>
+                                    </ContentView>
+                                    <ContentView row="0" column="1" touch="tapDropdown" id="down-2b" >
+                                        <Label text="&#xf0dd;" class="fas down" />
+                                    </ContentView>
+                                </GridLayout>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,2*" height="150px" >
+                                <Label row="0" column="0" text="Length of learning:" textWrap="true"   class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Years..." keyboardType="integer" class="key" width="30%" id="years-2" />
+                                <TextField row="0" column="2" hint="Months..." keyboardType="integer" class="key" width="30%" id="months-2" />
+                            </GridLayout>
+                        </StackLayout>
+                    </GridLayout>
+                    <GridLayout class="cell cell-text" height="450px" >
+                        <StackLayout width="98%" >
+                            <GridLayout rows="*" columns="2*,5*,2*" height="100px">
+                                <Label row="0" column="0" text="Language:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <ContentView row="0" column="1" class="border">
+                                    <dd:DropDown items="{{ languages }}" hint="Select language..." class="input-language drop-down" itemsTextAlignment="center" id="dropdown-3a"/>
+                                </ContentView>
+                                <ContentView row="0" column="2" touch="tapDropdown" id="down-3a" class="border">
+                                    <Label text="&#xf0dd;" class="fas" />
+                                </ContentView>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,3*,4*" height="150px">
+                                <Label row="0" column="0" text="Age of learning:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Enter years..." class="key" blur="dismissInput" keyboardType="integer" width="100%" id="age-3" />
+                                <Label row="0" column="2" text="Competance:" class="justify" verticalAlignment="center" />
+                                <GridLayout row="0" column="3" rows="*" columns="3*,*" class="border" >
+                                    <ContentView row="0" column="0" >
+                                        <dd:DropDown items="{{ competance }}" hint="Select..." class="input-language drop-down" itemsTextAlignment="center" id="dropdown-3b"/>
+                                    </ContentView>
+                                    <ContentView row="0" column="1" touch="tapDropdown" id="down-3b" >
+                                        <Label text="&#xf0dd;" class="fas down" />
+                                    </ContentView>
+                                </GridLayout>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,2*" height="150px" >
+                                <Label row="0" column="0" text="Length of learning:" textWrap="true"   class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Years..." keyboardType="integer" class="key" width="30%" id="years-3"/>
+                                <TextField row="0" column="2" hint="Months..." keyboardType="integer" class="key" width="30%" id="months-3" />
+                            </GridLayout>
+                        </StackLayout>
+                    </GridLayout>
+                    <GridLayout class="cell cell-text" height="450px" >
+                        <StackLayout width="98%" >
+                            <GridLayout rows="*" columns="2*,5*,2*" height="100px">
+                                <Label row="0" column="0" text="Language:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <ContentView row="0" column="1" class="border">
+                                    <dd:DropDown items="{{ languages }}" hint="Select language..." class="input-language drop-down" itemsTextAlignment="center" id="dropdown-4a"/>
+                                </ContentView>
+                                <ContentView row="0" column="2" touch="tapDropdown" id="down-4a" class="border">
+                                    <Label text="&#xf0dd;" class="fas" />
+                                </ContentView>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,3*,4*" height="150px">
+                                <Label row="0" column="0" text="Age of learning:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Enter years..." class="key" blur="dismissInput" keyboardType="integer" width="100%" id="age-4" />
+                                <Label row="0" column="2" text="Competance:" class="justify" verticalAlignment="center" />
+                                <GridLayout row="0" column="3" rows="*" columns="3*,*" class="border" >
+                                    <ContentView row="0" column="0" >
+                                        <dd:DropDown items="{{ competance }}" hint="Select..." class="input-language drop-down" itemsTextAlignment="center" id="dropdown-4b"/>
+                                    </ContentView>
+                                    <ContentView row="0" column="1" touch="tapDropdown" id="down-4b" >
+                                        <Label text="&#xf0dd;" class="fas down" />
+                                    </ContentView>
+                                </GridLayout>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,2*" height="150px" >
+                                <Label row="0" column="0" text="Length of learning:" textWrap="true"   class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Years..." keyboardType="integer" class="key" width="30%" id="years-4" />
+                                <TextField row="0" column="2" hint="Months..." keyboardType="integer" class="key" width="30%" id="months-4" />
+                            </GridLayout>
+                        </StackLayout>
+                    </GridLayout>
+                    <GridLayout class="cell cell-text" height="450px" >
+                        <StackLayout width="98%" >
+                            <GridLayout rows="*" columns="2*,5*,2*" height="100px">
+                                <Label row="0" column="0" text="Language:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <ContentView row="0" column="1" class="border">
+                                    <dd:DropDown items="{{ languages }}" hint="Select language..." class="input-language drop-down" itemsTextAlignment="center" id="dropdown-5a"/>
+                                </ContentView>
+                                <ContentView row="0" column="2" touch="tapDropdown" id="down-5a" class="border">
+                                    <Label text="&#xf0dd;" class="fas" />
+                                </ContentView>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,3*,4*" height="150px">
+                                <Label row="0" column="0" text="Age of learning:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Enter years..." class="key" blur="dismissInput" keyboardType="integer" width="100%" id="age-5" />
+                                <Label row="0" column="2" text="Competance:" class="justify" verticalAlignment="center" />
+                                <GridLayout row="0" column="3" rows="*" columns="3*,*" class="border" >
+                                    <ContentView row="0" column="0" >
+                                        <dd:DropDown items="{{ competance }}" hint="Select..." class="input-language drop-down" itemsTextAlignment="center" id="dropdown-5b"/>
+                                    </ContentView>
+                                    <ContentView row="0" column="1" touch="tapDropdown" id="down-5b" >
+                                        <Label text="&#xf0dd;" class="fas down" />
+                                    </ContentView>
+                                </GridLayout>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,2*" height="150px" >
+                                <Label row="0" column="0" text="Length of learning:" textWrap="true"   class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Years..." keyboardType="integer" class="key" width="30%" id="years-5"/>
+                                <TextField row="0" column="2" hint="Months..." keyboardType="integer" class="key" width="30%" id="months-5" />
+                            </GridLayout>
+                        </StackLayout>
+                    </GridLayout>
+                    <GridLayout>
+                        <ContentView touch="navNext" class="button Rf">
+                            <Label text="Next"/>
+                        </ContentView>
+                    </GridLayout>
+                    <ContentView height="20px" styling="background-color: #FFFFFF;" />
+                </StackLayout>
+            </GridLayout>
+        </ScrollView>
+        <ContentView class="swipe-icon swipeFade">
+            <GridLayout rows="*" columns="*">
+                <Label row="0" column="0" text="&#xf078;" class="fas chevron swipeFade" />
+            </GridLayout>
+        </ContentView>
+    </GridLayout>
+</Page>

@@ -1,0 +1,75 @@
+DropDown {
+    background-color: #0066FF;
+    color:#F0F8FF;
+    opacity: 1;
+    placeholder-color: #F0F8FF;
+    vertical-align: center;
+}
+
+TextField {
+    color: #F0F8FF;
+    placeholder-color: #F0F8FF;
+}
+
+.border {
+    border-bottom-width: 1;
+    border-bottom-color: #F0F8FF;
+}
+
+.button {
+    background-color: #0066FF;
+    border-radius: 15px;
+    height: 16%;
+    margin: 3%;
+    width: 50%;
+}
+
+.button Label {
+    color: #F0F8FF;
+    font-size: 16px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.cell {
+    background-color: #0066FF;
+    border-color: #FFFFFF;
+    border-radius: 15px;
+    border-width: 5px;
+    padding: 20px;
+}
+
+.cell-text {
+    color: #F0F8FF;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.chevron {
+    color: #EEEEEE;
+    font-size: 50px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.down {
+    vertical-align: center;
+}
+
+justify {
+    horizontal-align: right;
+}
+
+.subhead {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.swipe-icon {
+    background-color: #000000;
+    height: 20%;
+    horizontal-align: center;
+    opacity: 0.3;
+    vertical-align: bottom;
+    width: 100%;
+}

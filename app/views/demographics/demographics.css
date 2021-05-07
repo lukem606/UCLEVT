@@ -1,0 +1,80 @@
+.button {
+    background-color: #0066FF;
+    border-radius: 15px;
+    margin: 5px;
+    width: 50%;
+}
+
+.button Label {
+    color: #F0F8FF;
+    font-size: 20px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.tablet .button Label {
+    font-size: 30px;
+}
+
+.chevron {
+    color: #EEEEEE;
+    font-size: 50px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.tablet .chevron {
+    font-size: 70px;
+}
+
+.flex {
+	height: 80px;
+}
+
+.tablet .flex {
+	height: 120px;
+}
+
+.input {
+    font-size: 16px; 
+    margin-bottom: 30px;
+}
+
+.tablet .input {
+    font-size: 22px;
+}
+
+.prompt {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tablet .prompt {
+    font-size: 26px;
+}
+
+.subhead {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tablet .subhead {
+    font-size: 26px;
+}
+
+.swipe-icon {
+    background-color: #000000;
+    height: 20%;
+    horizontal-align: center;
+    opacity: 0.3;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.top {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 6%;
+}

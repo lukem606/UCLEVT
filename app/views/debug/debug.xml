@@ -1,0 +1,10 @@
+<Page actionBarHidden="true"
+		loaded="onLoaded" 
+		navigatingFrom="navFrom"
+		xmlns:CheckBox="@nstudio/nativescript-checkbox"
+		xmlns:dd="nativescript-drop-down" >
+
+	<StackLayout>
+		<Button text="Press me for https" tap="sendRequest"/>
+	</StackLayout>
+</Page>

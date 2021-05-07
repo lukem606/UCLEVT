@@ -1,0 +1,159 @@
+<Page navigatingTo="navTo" 
+      loaded="onLoaded" 
+      xmlns:dd="nativescript-drop-down" >
+    <ActionBar title="">
+        <NavigationButton android.systemIcon="ic_menu_back" tap="navBack" id="androidBack"/>
+        <ActionItem ios.position="left" tap="navBack" id="iosBack">
+            <Label text="&#xf060;" class="fas back" />
+        </ActionItem>
+    </ActionBar>
+
+    <GridLayout>
+        <ScrollView>
+            <GridLayout>
+                <StackLayout left="{{ screenWidth * 0.01 }}" top="{{ screenHeight * 0.01 }}" height="98%" width="98%" justifyContent="center" id="full" class="OSCf">
+                    <StackLayout height="15%" >
+                        <Label textWrap="true" text="Please give details of any countries you have lived in (current and previous)" class="subhead" />
+                    </StackLayout>
+                    <GridLayout class="cell cell-text" height="400px" >
+                        <StackLayout width="98%" >
+                            <GridLayout rows="*" columns="2*,5*,2*" height="100px">
+                                <Label row="0" column="0" text="Country:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <ContentView row="0" column="1" class="border">
+                                    <dd:DropDown items="{{ countries }}" hint="Select country..." class="input-country drop-down" itemsTextAlignment="center" id="dropdown-1"/>
+                                </ContentView>
+                                <ContentView row="0" column="2" touch="tapDropdown" id="down-1" class="border">
+                                    <Label text="&#xf0dd;" class="fas" />
+                                </ContentView>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,2*" height="150px" >
+                                <Label row="0" column="0" text="Length of residence:" textWrap="true"   class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Years..." keyboardType="integer" class="key" width="30%" id="years-1" />
+                                <TextField row="0" column="2" hint="Months..." keyboardType="integer" class="key" width="30%" id="months-1" />
+                            </GridLayout>
+                            <GridLayout rows="*" columns="*,2*" height="150px">
+                                <Label row="0" column="0" text="Age of residence:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Enter years..." class="key" blur="dismissInput" keyboardType="integer" width="100%" id="age-1" />
+                            </GridLayout>
+                            <ContentView touch="navNext" class="button Rf">
+                                <Label text="Next" />
+                            </ContentView>
+                            <ContentView height="20px" styling="background-color: #FFF;" />
+                        </StackLayout>
+                    </GridLayout>
+                    <GridLayout class="cell cell-text" height="400px" >
+                        <StackLayout width="98%" >
+                            <GridLayout rows="*" columns="2*,5*,2*" height="100px">
+                                <Label row="0" column="0" text="Country:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <ContentView row="0" column="1" class="border">
+                                    <dd:DropDown items="{{ countries }}" hint="Select country..." class="input-country drop-down" itemsTextAlignment="center" id="dropdown-2"/>
+                                </ContentView>
+                                <ContentView row="0" column="2" touch="tapDropdown" id="down-2" class="border">
+                                    <Label text="&#xf0dd;" class="fas" />
+                                </ContentView>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,2*" height="150px" >
+                                <Label row="0" column="0" text="Length of residence:" textWrap="true"   class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Years..." keyboardType="integer" class="key" width="30%" id="years-2" />
+                                <TextField row="0" column="2" hint="Months..." keyboardType="integer" class="key" width="30%" id="months-2" />
+                            </GridLayout>
+                            <GridLayout rows="*" columns="*,2*" height="150px">
+                                <Label row="0" column="0" text="Age of residence:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Enter years..." class="key" blur="dismissInput" keyboardType="integer" width="100%" id="age-2"/>
+                            </GridLayout>
+                            <ContentView touch="navNext" class="button Rf">
+                                <Label text="Next" />
+                            </ContentView>
+                            <ContentView height="20px" styling="background-color: #FFF;" />
+                        </StackLayout>
+                    </GridLayout>
+                    <GridLayout class="cell cell-text" height="400px" >
+                        <StackLayout width="98%" >
+                            <GridLayout rows="*" columns="2*,5*,2*" height="100px">
+                                <Label row="0" column="0" text="Country:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <ContentView row="0" column="1" class="border">
+                                    <dd:DropDown items="{{ countries }}" hint="Select country..." class="input-country drop-down" itemsTextAlignment="center" id="dropdown-3"/>
+                                </ContentView>
+                                <ContentView row="0" column="2" touch="tapDropdown" id="down-3" class="border">
+                                    <Label text="&#xf0dd;" class="fas" />
+                                </ContentView>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,2*" height="150px" >
+                                <Label row="0" column="0" text="Length of residence:" textWrap="true"   class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Years..." keyboardType="integer" class="key" width="30%" id="years-3" />
+                                <TextField row="0" column="2" hint="Months..." keyboardType="integer" class="key" width="30%" id="months-3" />
+                            </GridLayout>
+                            <GridLayout rows="*" columns="*,2*" height="150px">
+                                <Label row="0" column="0" text="Age of residence:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Enter years..." class="key" blur="dismissInput" keyboardType="integer" width="100%" id="age-3" />
+                            </GridLayout>
+                            <ContentView touch="navNext" class="button Rf">
+                                <Label text="Next" />
+                            </ContentView>
+                            <ContentView height="20px" styling="background-color: #FFF;" />
+                        </StackLayout>
+                    </GridLayout>
+                    <GridLayout class="cell cell-text" height="400px" >
+                        <StackLayout width="98%" >
+                            <GridLayout rows="*" columns="2*,5*,2*" height="100px">
+                                <Label row="0" column="0" text="Country:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <ContentView row="0" column="1" class="border">
+                                    <dd:DropDown items="{{ countries }}" hint="Select country..." class="input-country drop-down" itemsTextAlignment="center" id="dropdown-4"/>
+                                </ContentView>
+                                <ContentView row="0" column="2" touch="tapDropdown" id="down-4" class="border">
+                                    <Label text="&#xf0dd;" class="fas" />
+                                </ContentView>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,2*" height="150px" >
+                                <Label row="0" column="0" text="Length of residence:" textWrap="true"   class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Years..." keyboardType="integer" class="key" width="30%" id="years-4" />
+                                <TextField row="0" column="2" hint="Months..." keyboardType="integer" class="key" width="30%" id="months-4" />
+                            </GridLayout>
+                            <GridLayout rows="*" columns="*,2*" height="150px">
+                                <Label row="0" column="0" text="Age of residence:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Enter years..." class="key" blur="dismissInput" keyboardType="integer" width="100%" id="age-4" />
+                            </GridLayout>
+                            <ContentView touch="navNext" class="button Rf">
+                                <Label text="Next" />
+                            </ContentView>
+                            <ContentView height="20px" styling="background-color: #FFF;" />
+                        </StackLayout>
+                    </GridLayout>
+                    <GridLayout class="cell cell-text" height="400px" >
+                        <StackLayout width="98%" >
+                            <GridLayout rows="*" columns="2*,5*,2*" height="100px">
+                                <Label row="0" column="0" text="Country:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <ContentView row="0" column="1" class="border">
+                                    <dd:DropDown items="{{ countries }}" hint="Select country..." class="input-country drop-down" itemsTextAlignment="center" id="dropdown-5"/>
+                                </ContentView>
+                                <ContentView row="0" column="2" touch="tapDropdown" id="down-5" class="border">
+                                    <Label text="&#xf0dd;" class="fas" />
+                                </ContentView>
+                            </GridLayout>
+                            <GridLayout rows="*" columns="2*,2*,2*" height="150px" >
+                                <Label row="0" column="0" text="Length of residence:" textWrap="true"   class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Years..." keyboardType="integer" class="key" width="30%" id="years-5"/>
+                                <TextField row="0" column="2" hint="Months..." keyboardType="integer" class="key" width="30%" id="months-5" />
+                            </GridLayout>
+                            <GridLayout rows="*" columns="*,2*" height="150px">
+                                <Label row="0" column="0" text="Age of residence:" textWrap="true" class="justify" verticalAlignment="center" />
+                                <TextField row="0" column="1" hint="Enter years..." class="key" blur="dismissInput" keyboardType="integer" width="100%" id="age-5" />
+                            </GridLayout>
+                        </StackLayout>
+                    </GridLayout>
+                    <GridLayout>
+                        <ContentView touch="navSubmit" class="button Rf">
+                            <Label text="Submit" />
+                        </ContentView>
+                    </GridLayout>
+                    <ContentView height="20px" styling="background-color: #FFF;" />
+                </StackLayout>
+            </GridLayout>
+        </ScrollView>
+        <ContentView class="swipe-icon swipeFade">
+            <GridLayout rows="*" columns="*">
+                <Label row="0" column="0" text="&#xf078;" class="fas chevron swipeFade" />
+            </GridLayout>
+        </ContentView>
+    </GridLayout>
+</Page>

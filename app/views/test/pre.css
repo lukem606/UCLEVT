@@ -1,0 +1,230 @@
+.background {
+	margin-top: 30px;
+}
+
+.tablet .background {
+	margin-top: 60px;
+}
+
+.button {
+    background-color: #0066FF;
+    border-radius: 15px;
+	height: auto;
+    margin: 5px;
+    width: 30%;
+}
+
+.button Label {
+    color: #F0F8FF;
+    font-size: 16px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.tablet .button Label {
+    font-size: 24px;
+}
+
+.card {
+    background-color: #F0F8FF;
+    border-radius: 15px;
+    height: 40%;
+    width: 40%;
+}
+
+.card-label {
+    color: #0066FF;
+    font-size: 30px;
+    font-weight: bold;
+    horizontal-align: center;
+    vertical-align: center;
+    visibility: hidden;
+}
+
+.tablet .card Label {
+    font-size: 50px;
+}
+
+.container {
+    margin-top: 2%;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+}
+
+.grid {
+    background-color: #AAAAAA;
+    border-radius: 15px;
+    margin-bottom: 3%;
+    margin-top: 2%;
+    padding: 5%;
+}
+
+.tablet .grid {
+    margin-bottom: 1%;
+}
+
+.info {
+    font-size: 26px;
+}
+
+.modal {
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    width: 90%;
+}
+
+.tablet .modal {
+    width: 70%;
+}
+
+.modal StackLayout {
+    margin: 10px;
+    horizontal-align: center;
+    vertical-align: center;
+    width: 95%;
+}
+
+.modal Label {
+    margin: 10px;
+}
+
+.modal-header {
+    font-size: 24px;
+    font-weight: bold;
+    horizontal-align: center;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.tablet .modal-header {
+    font-size: 40px;
+}
+
+.modal-text {
+    font-size: 18px;
+    horizontal-align: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tablet .modal-text {
+    font-size: 26px;
+}
+
+.modal-info-text {
+    font-size: 14px;
+    horizontal-align: left;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.tablet .modal-info-text {
+    font-size: 24px;
+}
+
+.modal-start-text {
+    font-size: 18px;
+    horizontal-align: left;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.tablet .modal-start-text {
+    font-size: 26px;
+}
+
+.scores {
+    font-size: 26px;
+}
+
+.scores-trophy {
+    font-size: 26px;
+}
+
+.tablet .scores-trophy {
+    font-size: 44px;
+}
+
+.subheader {
+    font-size: 20px;
+    horizontal-align: center;
+}
+
+.tablet .subheader {
+	font-size: 30px;
+}
+
+.title-text {
+	color: #002288;
+	font-size: 50px;
+	font-weight: bold;
+	horizontal-align: center;
+}
+
+.tablet .title-text {
+	font-size: 65px;
+	horizontal-align: center;
+}
+
+#info {
+	background-color: #0066FF;
+	border-radius: 50%;
+	color: #FFFFFF;
+	font-size: 24px;
+	height: 90px;
+	horizontal-align: center;
+	text-align: center;
+	width: 90px;
+}
+
+#modal-end {
+	height: 400px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.tablet #modal-end {
+	height: 550px;
+}
+
+#modal-end Button:disabled {
+	background-color: #BBBBBB;
+}
+
+#modal-info {
+    height: 1000px;
+    opacity: 0;
+	visibility: hidden;
+}
+
+.tablet #modal-info {
+	height: 1600px;
+}
+
+#modal-start {
+	height: 300px;
+	opacity: 1;
+}
+
+.tablet #modal-start {
+	height: 500px;
+}
+
+#overlay {
+	background-color: #111111;
+	opacity: 0.7;
+}
+
+#scores {
+	background-color: #0066FF;
+	border-radius: 50%;
+	color: #FFFFFF;
+	font-size: 24px;
+	height: 90px;
+	horizontal-align: left;
+	margin-left: 5%;
+	text-align: center;
+	width: 90px;
+}

@@ -1,0 +1,97 @@
+Label {
+    font-size: 16px;
+}
+
+.tablet Label {
+    font-size: 24px;
+}
+
+.block {
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #0066FF;
+    border-radius: 15px;
+    margin: 5px;
+    width: 50%;
+}
+
+.button Label {
+    color: #F0F8FF;
+    font-size: 30px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.chevron {
+    color: #EEEEEE;
+    font-size: 50px;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.tablet .chevron {
+    font-size: 70px;
+}
+
+.end {
+    margin-bottom: 50px !important;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+}
+
+.logo {
+    width: 50%;
+}
+
+.tablet .logo {
+    width: 30%;
+}
+
+.title {
+    width: 95%;
+}
+
+.tablet .title {
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.title-text {
+    font-size: 30px;
+    horizontal-align: center;
+}
+
+.tablet .title-text {
+    font-size: 50px;
+    horizontal-align: center;
+}
+
+.top {
+	margin-top: 20px;
+    padding: 20%;
+}
+
+.tablet .top {
+	margin-top: 50px;
+    padding: 10%;
+}
+
+#swipe-icon {
+    background-color: #000000;
+    height: 20%;
+    horizontal-align: center;
+    opacity: 0.3;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+#warning {
+    color: #FF0000;
+    font-weight: bold;
+    horizontal-align: center;
+    visibility: hidden;
+}

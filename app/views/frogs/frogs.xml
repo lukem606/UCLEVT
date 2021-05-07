@@ -1,0 +1,56 @@
+<Page loaded="onLoaded" 
+      navigatingFrom="navFrom" >
+    <ActionBar title="">
+        <NavigationButton android.systemIcon="ic_menu_back" tap="navBack" id="androidBack"/>
+        <ActionItem ios.position="left" tap="navBack" id="iosBack">
+            <Label text="&#xf060;" class="fas back" />
+        </ActionItem>
+    </ActionBar>
+    
+    <GridLayout rows="*,5*" columns="*" >
+        <StackLayout row="0" column="0" rowSpan="2" >
+            <Label row="0" column="0" text="{{ headerText }}" class="head MOCf" />
+            <Label text="{{ [current, total], current + ' of ' + total }}" class="count OSCf" />
+            <GridLayout rows="*" columns="*,*,*" height="{{ screenHeight * 0.5 }}" width="{{ screenWidth * 0.96 }}" class="frog-grid" >
+                <ContentView row="0" column="0" class="backing" id="backing1" />
+                <Image row="0" column="0" src="{{ frogs[0] }}" height="{{ screenHeight * 0.4 }}" class="frog frog1" id="frog1-closed" />
+                <Image row="0" column="0" src="{{ frogs[1] }}" height="{{ screenHeight * 0.4 }}" class="frog frog1" id="frog1-open" />
+                <Image row="0" column="0" src="{{ frogs[2] }}" height="{{ screenHeight * 0.4 }}" class="frog frog1" id="frog1-jump" />
+                <ContentView row="0" column="1" class="backing" id="backing2" />
+                <Image row="0" column="1" src="{{ frogs[0] }}" height="{{ screenHeight * 0.4 }}" class="frog frog2" id="frog2-closed" />
+                <Image row="0" column="1" src="{{ frogs[1] }}" height="{{ screenHeight * 0.4 }}" class="frog frog2" id="frog2-open" />
+                <Image row="0" column="1" src="{{ frogs[2] }}" height="{{ screenHeight * 0.4 }}" class="frog frog2" id="frog2-jump" />
+                <ContentView row="0" column="2" class="backing" id="backing3" />
+                <Image row="0" column="2" src="{{ frogs[0] }}" height="{{ screenHeight * 0.4 }}" class="frog frog3" id="frog3-closed" />
+                <Image row="0" column="2" src="{{ frogs[1] }}" height="{{ screenHeight * 0.4 }}" class="frog frog3" id="frog3-open" />
+                <Image row="0" column="2" src="{{ frogs[2] }}" height="{{ screenHeight * 0.4 }}" class="frog frog3" id="frog3-jump" />
+            </GridLayout>
+        </StackLayout>
+        <ContentView row="0" column="0" rowSpan="2" class="overlay" id="overlay" touch="overlayBlock" />
+        <ContentView row="1" column="0" class="modal start" id="modal-start" >
+            <StackLayout>
+                <Label textWrap="true" text="English Vowel Test" class="modal-head MOCf"/>
+                <Label textWrap="true" text="You'll hear three words, sometimes with noise" class="modal-text OSCf" />
+                <Label textWrap="true" text="Two words are the same and one is different" class="modal-text OSCf" />
+                <Label textWrap="true" text="Click on the frog who says the different word" class="modal-text OSCf" />
+                <Label textWrap="true" text="This test lasts about 5-10 minutes" class="modal-text OSCf" />
+                <FlexboxLayout justifyContent="center">
+                    <ContentView touch="modalStart" class="modal-start-button m-button">
+                        <Label text="START" class="Rf" />
+                    </ContentView>
+                </FlexboxLayout>
+            </StackLayout>
+        </ContentView>
+        <ContentView row="1" column="0" class="modal end" id="modal-end" >
+            <StackLayout>
+                <Label textWrap="true" text="Finished!" class="modal-head MOCf"/>
+                <Label textWrap="true" text="{{ percentage, 'You were ' + percentage + '\% correct' }}" class="modal-text OSCf"/>
+                <FlexboxLayout justifyContent="center">
+                    <ContentView touch="modalContinue" class="modal-end-button m-button" isEnabled="false">
+                        <Label text="Continue" class="Rf" />
+                    </ContentView>
+                </FlexboxLayout>                    
+            </StackLayout>
+        </ContentView>
+    </GridLayout>
+</Page>

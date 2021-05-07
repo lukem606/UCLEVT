@@ -1,0 +1,47 @@
+Button {
+    background-color: #0066FF;
+    border-radius: 15px;
+    color: #FFFFFF;
+    width: 50%;
+}
+
+Label {
+    color: #0066FF;
+    font-size: 30px;
+    horizontal-align: center;
+}
+
+.modal {
+    background-color: #EEEEEE;
+    border-radius: 15px;
+}
+
+#container{
+    visibility: hidden;
+}
+
+#modal-1 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#modal-2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#modal-3 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#modal-4 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#overlay {
+    background-color: #111111;
+    opacity: 0;
+    visibility: hidden;
+}

@@ -1,0 +1,21 @@
+{
+	"audio":        	"~/audio",
+	"card14":       	"~/views/card/card14",
+	"card28":       	"~/views/card/card28",
+	"consent":      	"~/views/consent/consent",
+	"countries":		"~/views/demographics/countries",
+	"debug":				"~/views/debug/debug",
+	"demographics":	"~/views/demographics/demographics",
+	"frogs":       	"~/views/frogs/frogs",
+	"HVPT":         	"~/views/HVPT/HVPT",
+	"info":         	"~/views/info/info",
+	"languages":    	"~/views/demographics/languages",
+	"main":         	"~/views/main/main",
+	"new":          	"~/views/demographics/new",
+	"options":      	"~/views/options/options",
+	"post":          	"~/views/test/post",
+	"pre":          	"~/views/test/pre",
+	"settings":     	"~/views/settings/settings",
+	"trial14":      	"~/views/trial/trial14",
+	"trial28":      	"~/views/trial/trial28"
+}

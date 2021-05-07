@@ -1,0 +1,105 @@
+<Page xmlns:CheckBox="@nstudio/nativescript-checkbox"
+      xmlns:dd="nativescript-drop-down" 
+      navigatingTo="navTo" 
+      navigatingFrom="navFrom" 
+      loaded="onLoaded" >
+    <ActionBar title="">
+        <NavigationButton android.systemIcon="ic_menu_back" tap="navBack" id="androidBack"/>
+        <ActionItem ios.position="left" tap="navBack" id="iosBack">
+            <Label text="&#xf060;" class="fas back" />
+        </ActionItem>
+    </ActionBar>
+    
+    <GridLayout>
+        <ScrollView>
+            <StackLayout class="top OSCf" id="top">
+                <Label text="Age (years)" textWrap="true" class="subhead" />
+                <TextField hint="Enter here..." class="input key" keyboardType="integer" id="age" />
+                <Label text="Gender" class="subhead" />
+                <FlexboxLayout justifyContent="center" class="input">
+                    <CheckBox:CheckBox text="Male" class="gender" />
+                    <CheckBox:CheckBox text="Female" class="gender" />
+                    <CheckBox:CheckBox text="Other" class="gender" />
+                </FlexboxLayout>
+                <Label text="Place of birth (city, country)" class="subhead" />
+                <GridLayout rows="*" columns="7*,*" >
+                    <ContentView row="0" column="0">
+                        <dd:DropDown items="{{ countries }}" hint="Select country..." class="input" itemsTextAlignment="center" id="dropdown-1"/>
+                    </ContentView>
+                    <ContentView row="0" column="1" touch="tapDropdown" id="down-1" >
+                        <Label text="&#xf0dd;" class="fas" />
+                    </ContentView>
+                </GridLayout>
+                <Label text="Highest level of education" class="subhead" />
+                <FlexboxLayout justifyContent="center" class="input">
+                    <CheckBox:CheckBox text="Primary" class="education" />
+                    <CheckBox:CheckBox text="GCSE" class="education" />
+                    <CheckBox:CheckBox text="College" class="education" />
+                    <CheckBox:CheckBox text="A-level" class="education" />
+                </FlexboxLayout>
+                <FlexboxLayout justifyContent="center" class="input">
+                    <CheckBox:CheckBox text="Bachelor's" class="education" />
+                    <CheckBox:CheckBox text="Master's" class="education" />
+                    <CheckBox:CheckBox text="Doctorate" class="education" />
+                </FlexboxLayout>
+                <Label text="Native language" class="subhead" />
+                <GridLayout rows="*" columns="7*,*" >
+                    <ContentView row="0" column="0">
+                        <dd:DropDown items="{{ languages }}" hint="Select language..." class="input" itemsTextAlignment="center" id="dropdown-2"/>
+                    </ContentView>
+                    <ContentView row="0" column="1" touch="tapDropdown" id="down-2" >
+                        <Label text="&#xf0dd;" class="fas" />
+                    </ContentView>
+                </GridLayout>
+                <Label text="Mother's spoken language" class="subhead" />
+                <GridLayout rows="*" columns="7*,*" >
+                    <ContentView row="0" column="0">
+                        <dd:DropDown items="{{ languages }}" hint="Select language..." class="input" itemsTextAlignment="center" id="dropdown-3"/>
+                    </ContentView>
+                    <ContentView row="0" column="1" touch="tapDropdown" id="down-3" >
+                        <Label text="&#xf0dd;" class="fas" />
+                    </ContentView>
+                </GridLayout>
+                <Label text="Father's spoken language" class="subhead" />
+                <GridLayout rows="*" columns="7*,*" >
+                    <ContentView row="0" column="0">
+                        <dd:DropDown items="{{ languages }}" hint="Select language..." class="input" itemsTextAlignment="center" id="dropdown-4"/>
+                    </ContentView>
+                    <ContentView row="0" column="1" touch="tapDropdown" id="down-4" >
+                        <Label text="&#xf0dd;" class="fas" />
+                    </ContentView>
+                </GridLayout>
+                <Label text="Do you have a hearing impairment?" class="subhead" />
+                <FlexboxLayout justifyContent="center" class="input" >
+                    <CheckBox:CheckBox row="0" column="0" text="No" class="hearingImp" />
+                    <CheckBox:CheckBox row="0" column="1" text="Yes" class="hearingImp" />
+                </FlexboxLayout>
+                <Label text="Do you have a neurological impairment?" class="subhead" />
+                <FlexboxLayout justifyContent="center" class="input" >
+                    <CheckBox:CheckBox row="0" column="0" text="No" class="neuroImp" />
+                    <CheckBox:CheckBox row="0" column="1" text="Yes" class="neuroImp" />
+                </FlexboxLayout>
+                <Label text="Do you have a language or learning impairment?" class="subhead" />
+                <FlexboxLayout justifyContent="center" class="input" >
+                    <CheckBox:CheckBox row="0" column="0" text="No" class="languageImp" />
+                    <CheckBox:CheckBox row="0" column="1" text="Yes" class="languageImp" />
+                </FlexboxLayout>
+                <Label textWrap="true" text="Do you have impaired vision, even with corrective measures (e.g. glasses or lenses)?" class="subhead" />
+                <FlexboxLayout justifyContent="center" class="input" >
+                    <CheckBox:CheckBox row="0" column="0" text="No" class="visionImp" />
+                    <CheckBox:CheckBox row="0" column="1" text="Yes" class="visionImp" />
+                </FlexboxLayout>
+                <GridLayout>
+                    <ContentView touch="navNext" class="button Rf">
+                        <Label text="Next" />
+                    </ContentView>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+        <ContentView class="swipe-icon swipeFade">
+            <GridLayout rows="*" columns="*">
+                <Label row="0" column="0" text="&#xf078;" class="fas chevron swipeFade" />
+            </GridLayout>
+        </ContentView>
+    </GridLayout>
+</Page>
